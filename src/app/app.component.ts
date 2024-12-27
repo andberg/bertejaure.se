@@ -11,4 +11,5 @@ import { RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Välkommen till Bertejaure';
+  thisYear = new Date().getFullYear();
 }

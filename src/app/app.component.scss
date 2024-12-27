@@ -130,7 +130,7 @@ table {
 }
 
 body {
-  padding: 12px;
+  padding: $spacing-24;
   font-size: 1rem;
   line-height: 1.4rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -151,9 +151,31 @@ h5 {
   font-style: normal;
 }
 
+h1 {
+  font-size: $font-32;
+  line-height: 1.22;
+  margin: 0 0 $spacing-24 0;
+}
+
+h2 {
+  font-size: $font-24;
+  line-height: 1.22;
+  margin: $spacing-12 0;
+}
+
+h4 {
+  font-weight: 600;
+  margin: 0 0 $spacing-8 0;
+}
+
+p {
+  max-width: 65ch;
+  margin-bottom: $spacing-8;
+}
+
 a {
   color: $font-color;
-  text-decoration: underline 0.15em;
+  text-decoration: underline 0.12em;
   text-underline-offset: 0.1em;
   transition: text-decoration 400ms;
 }
@@ -164,6 +186,9 @@ a:visited {
   color: $font-color;
 }
 
+header {
+  margin: $spacing-24 0;
+}
 .header-inner-container {
   max-width: $max-width;
   margin: 0 auto;
@@ -212,4 +237,30 @@ nav {
 .main-inner-container {
   max-width: $max-width;
   margin: 2rem auto;
+}
+
+footer {
+  margin-top: $spacing-48;
+  border-top: 2px solid $font-color;
+  max-width: $max-width;
+  display: flex;
+  justify-content: flex-start;
+  padding: $spacing-32 0;
+  .footer-column {
+    min-width: 200px;
+    &:first-child {
+      margin-right: $spacing-32;
+    }
+    max-width: 400px;
+  }
+  .copyright {
+    margin: $spacing-12 0;
+  }
+}
+.list-without-bullets {
+  list-style: none;
+  li {
+    list-style: none;
+    margin-bottom: $spacing-8;
+  }
 }
