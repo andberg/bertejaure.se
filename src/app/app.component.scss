@@ -170,7 +170,7 @@ h4 {
 
 p {
   max-width: 65ch;
-  margin-bottom: $spacing-8;
+  margin-bottom: $spacing-16;
 }
 
 a {
@@ -187,7 +187,7 @@ a:visited {
 }
 
 header {
-  margin: $spacing-24 0;
+  padding: $spacing-24 0;
 }
 .header-inner-container {
   max-width: $max-width;
@@ -195,7 +195,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .logo {
@@ -243,10 +243,18 @@ footer {
   margin-top: $spacing-48;
   border-top: 2px solid $font-color;
   max-width: $max-width;
-  display: flex;
-  justify-content: flex-start;
   padding: $spacing-32 0;
+  width: 100%;
+  .column-container {
+    display: flex;
+    justify-content: flex-start;
+  }
   .footer-column {
+    padding: $spacing-12;
+    background: linear-gradient(
+      rgba(251, 251, 251, 0.5),
+      rgba(255, 255, 255, 0.5)
+    );
     min-width: 200px;
     &:first-child {
       margin-right: $spacing-32;
@@ -262,5 +270,30 @@ footer {
   li {
     list-style: none;
     margin-bottom: $spacing-8;
+  }
+}
+.last {
+  width: 100%;
+  height: auto;
+  padding: $spacing-16 0;
+  min-height: 200px;
+  background: linear-gradient(rgba(255, 255, 255, 0.815), rgba(51, 153, 178, 0)),
+    url("../../public/assets/Bakgrund.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .last-image {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: auto;
+    max-width: 450px;
+    max-height: 300px;
   }
 }
